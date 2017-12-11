@@ -1,5 +1,5 @@
 {{#each articles}}
-<div class="aerticle card" id={{this._id}}>
+<div class="article card" id={{this._id}}>
 	<div class="card-header" >
 		<a href="{{this.link}}" target="_blank">{{this.title}}</a>
 
@@ -8,14 +8,13 @@
 		<p class="summary card-text">{{this.summary}}</p>
 
 		{{#unless this.note}}
-		<button type="button" class="addNote btn btn-sm" value="{{this._id}}">Add A Note</button>
+		<button type="button" class="note btn btn-sm" value="{{this._id}}">Add A Note</button>
 		{{/unless}}
 		{{#if this.note}}
-		<button type="button" class="editNote btn btn-sm" value="{{this._id}}">Edit Note</button>
+		<button type="button" class="note btn btn-sm" value="{{this._id}}">Edit Note</button>
 		{{/if}}
 	</div>
 </div>
 {{/each}}
 
 
-<div id="notes"></div>
